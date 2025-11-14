@@ -11,13 +11,22 @@ def print_dramatic_text(text: str, delay=0.05):
     print()
 
 def draw_card(value: int) -> None:
-    print('-------------')
-    print('+           +')
-    print('+           +')
-    print('+     {}     +'.format(value))
-    print('+           +')
-    print('+           +')
-    print('-------------')
+    if value >= 0:
+        print('-------------')
+        print('+           +')
+        print('+           +')
+        print('+     {}     +'.format(value))
+        print('+           +')
+        print('+           +')
+        print('-------------')
+    else:
+        print('-------------')
+        print('+           +')
+        print('+           +')
+        print('+     {}    +'.format(value))
+        print('+           +')
+        print('+           +')
+        print('-------------')
 
 if __name__ == '__main__':
     print_dramatic_text("Welcome to Candy Land! Today you will have to compete with your opponet to get to King Kandy first.")
@@ -36,10 +45,20 @@ if __name__ == '__main__':
 
     name = names[random.randint(0, 4)]
     player_1 = Player(name)
+
+    name = names[random.randint(0, 4)]
+    player_2 = Player(name)
     
     print_dramatic_text('Welcome Player 1 you are ' + player_1.name)
 
-    # round 1
-    input('Player 1 press Enter to draw a card! ')
-    steps = random.randint()
+    while not player_1.finish:
 
+        input('Press Enter to draw a card! ')
+        steps = random.randint(-1, 5)
+        draw_card(steps)
+        player_1.move(steps)
+        print_dramatic_text('You move ' + str(steps) + '!')
+        print('Your location: ' + str(player_1.location))
+
+    print_dramatic_text('Congratulations you have reached King Kandy!')
+    
