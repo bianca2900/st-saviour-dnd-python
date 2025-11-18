@@ -15,6 +15,6 @@ class Player:
             self.location = 0
             return
         self.location += steps
-        if self.location >= 100:
+        if self.location >= 10:
             self.finish = True
     
