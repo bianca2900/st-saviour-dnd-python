@@ -44,7 +44,7 @@ if __name__ == '__main__':
     second_names = [
         'Lord Licorice',
         'Princess Lolly',
-        'Ice Princess'
+        'Princess Candycane'
     ]
 
     name = first_names[random.randint(0, 2)]
