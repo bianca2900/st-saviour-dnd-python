@@ -1,15 +1,17 @@
-import random
+import random 
 import time
 
 from player import Player
-from draw import draw_d20, draw_d6, draw_d4
+from draw import draw_d20, draw_d6, draw_d4 
 
-def print_dramatic_text(text: str, delay=0.05):
+# this will deliver the code letter by letter
+def print_dramatic_text(text: str, delay=0.05): # this will print the text slowly
     for char in text:
         print(char, end='', flush=True)
-        time.sleep(delay)
+        time.sleep(delay) # allows the the text to print with very quick pauses
     print()
 
+# this piece of code places the value of the roll into a card like image
 def draw_card(value: int) -> None:
     if value >= 0:
         print('-------------')
