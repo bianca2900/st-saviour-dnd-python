@@ -32,7 +32,7 @@ if __name__ == '__main__':
     print_dramatic_text("Welcome to Candy Land! Today you will have to compete with your opponet to get to King Kandy first.")
     print_dramatic_text("First you will have to roll to pick your character.")
     print_dramatic_text("The random character generator will give you your character")
-    input('Press Enter to draft a random character. ')
+    input('Press Enter to get a random character. ')
     roll = random.randint(0, 4)
 
     first_names = [
