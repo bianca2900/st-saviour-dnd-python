@@ -29,7 +29,7 @@ def draw_card(value: int) -> None:
         print('+           +')
         print('+           +')
         print('-------------')
-        
+
 # this piece of code will start the game 
 if __name__ == '__main__':
     print_dramatic_text("Welcome to Candy Land! Today you will have to compete with your opponet to get to King Kandy first.")
