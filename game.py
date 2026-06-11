@@ -2,7 +2,6 @@ import random
 import time
 # tells the code which files to import
 from player import Player
-from draw import draw_d20, draw_d6, draw_d4 
 
 # this will deliver the code letter by letter
 def print_dramatic_text(text: str, delay=0.05): # this will print the text slowly
